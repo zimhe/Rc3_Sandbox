@@ -16,6 +16,7 @@ public class BlockSpawner : MonoBehaviour {
     [SerializeField]
     float _scaleY = 2.0f;
 
+
     private List<Rigidbody> _blocks;
     List<Transform> blockObject;
 
@@ -36,7 +37,6 @@ public class BlockSpawner : MonoBehaviour {
                 _blocks.Add(block.GetComponent<Rigidbody>());
             }
         }
-
         CreateJoints();
     }
 
@@ -88,5 +88,6 @@ public class BlockSpawner : MonoBehaviour {
         var handler = blockObject[index].GetComponent<ISelectionHandler>();
 
         handler.OnSelected();
+
     }
 }

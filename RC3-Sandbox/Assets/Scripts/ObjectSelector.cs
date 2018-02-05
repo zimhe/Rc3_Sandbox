@@ -20,6 +20,7 @@ public class ObjectSelector : MonoBehaviour {
             var ray = _camera.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
+
             if(Physics.Raycast(ray,out hit))
             {
                 var handler = hit.transform.GetComponent<ISelectionHandler>();
